@@ -18,7 +18,7 @@ int primo(int x) {
 	int i;
 	int cont = 0;
 
-	for(i = 0; i < x; i++) {
+	for(i = 1; i <= x; i++) {
 		if (x % i == 0) {
 			cont += 1;
 		}
