@@ -1,20 +1,28 @@
 #include <stdio.h>
 
 int main(void) {
-	
-	int n;	
-	int primo(int n);	
+
+	int n;
+	int primo(int n);
 
 	printf("Digite um valor: ");
 	scanf("%d", &n);
 
-	primo(n);
+    if(n == 1) {
+        printf("%d é primo", 1);
+    }else{
+        if(primo(n) == 1){
+            printf("%d é primo ", n);
+        }else {
+            printf("%d não é primo", n);
+        }
+    }
 
 	return 0;
 }
 
 int primo(int x) {
-	
+
 	int i;
 	int cont = 0;
 
@@ -24,9 +32,8 @@ int primo(int x) {
 		}
 	}
 	if(cont == 2) {
-		printf("%d é primo", x);
+		return 1;
 	}else {
-		printf("%d não é primo", x);
+		return 0;
 	}
 }
-		
