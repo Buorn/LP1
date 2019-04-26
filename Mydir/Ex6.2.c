@@ -1,34 +1,33 @@
 #include <stdio.h>
 
 int main(void) {
-	
-	int m, n;
-	int mat[m][n];
-	
-	printf("Digite o tamano da matriz mxn: ");
-	scanf("%d %d", &m, &n);
-	
-	void escreveMatriz(int mat[m][n], int m, int n);
-	void imprimeMatriz(int mat[m][n], int m, int n);
-	
-	
-	imprimeMatriz(escreveMatriz, m,n);
-	
-	return 0;
+
+    int arr[4][2], i, c;
+    void preenche(int arr[4][2], int i, int c);
+    void media(int arr[4][2], int i, int c);
+    preenche(arr, i, c);
+    media(arr, i, c);
+
+    return 0;
 }
-	
-	
-void escreveMatriz(int mat[m][n], int m, int n) {
-	int v;
-	for (int i = 0; i < m; i++){
-		for(int j = 0; j < n; j++){
-			printf("Digite o Elemento[%d][%d] \n", i, j);
-			mat[i][j] = scanf("%d",&v);
-			
-		}
-	}	
-	
-		
-	
-}	
-	
+
+void preenche(int arr[4][2], int i, int c) {
+    for(i = 0; i < 4; i++){
+        for(c = 0; c < 2; c++){
+            printf("\nDigite o Elemento [%d][%d]: ", i+1, c+1);
+            scanf("%d", &arr[i][c]);
+        }
+    }
+}
+
+void media(int arr[4][2], int i, int c){
+    float soma = 0;
+    float media;
+    for(i = 0; i < 4; i++){
+        for(c = 0; c < 2; c++){
+            soma = soma + arr[i][c];
+        }
+    }
+    printf("Média = %f:\n",media = soma/(i*c));
+
+}
